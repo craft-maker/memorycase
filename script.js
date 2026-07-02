@@ -165,6 +165,13 @@ function typewriter(el, text, speed, onDone) {
   cursor.className = "cursor";
   let i = 0;
 
+   // Auto-scrolls the letter box to the very bottom as new text streams in
+const letterBox = document.getElementById("letter-box");
+if (letterBox) {
+  letterBox.scrollTop = letterBox.scrollHeight;
+}
+
+
   function step() {
     if (i <= text.length) {
       el.textContent = text.slice(0, i);
