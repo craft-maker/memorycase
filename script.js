@@ -165,18 +165,6 @@ function typewriter(el, text, speed, onDone) {
   cursor.className = "cursor";
   let i = 0;
 
-// Auto-scrolls the letter box whenever a new letter is typed
-const targetLetterText = document.getElementById("letter-text");
-const parentLetterBox = document.getElementById("letter-box");
-
-if (targetLetterText && parentLetterBox) {
-  const observer = new MutationObserver(() => {
-    parentLetterBox.scrollTop = parentLetterBox.scrollHeight;
-  });
-  observer.observe(targetLetterText, { childList: true, characterData: true, subtree: true });
-}
-
-
 
   function step() {
     if (i <= text.length) {
@@ -742,3 +730,15 @@ document.addEventListener("DOMContentLoaded", () => {
   initEasterEggs();
   initLanding();
 });
+
+// Auto-scrolls the letter box whenever a new letter is typed
+const targetLetterText = document.getElementById("letter-text");
+const parentLetterBox = document.getElementById("letter-box");
+
+if (targetLetterText && parentLetterBox) {
+  const observer = new MutationObserver(() => {
+    parentLetterBox.scrollTop = parentLetterBox.scrollHeight;
+  });
+  observer.observe(targetLetterText, { childList: true, characterData: true, subtree: true });
+}
+
