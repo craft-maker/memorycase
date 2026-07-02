@@ -1077,3 +1077,38 @@ img {
     margin-top: 20px;
   }
 }
+/* Fix for mobile collage overlapping the ending text */
+@media (max-width: 640px) {
+  #scene-ending {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Aligns things sequentially */
+    padding-top: 2vh;
+  }
+
+  #scene-ending .collage-stage {
+    position: relative;
+    height: 35vh; /* Locks the photos strictly into the top 35% of the screen */
+    width: 100%;
+    transform: none; /* Reset previous transform */
+    margin-bottom: 20px; /* Forces a gap before the text starts */
+  }
+
+  #scene-ending .ending-content {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    margin-top: 0;
+  }
+
+  #scene-ending .ending-title {
+    font-size: 1.8rem; /* Shrinks the title slightly so it fits better */
+    margin-bottom: 10px;
+  }
+
+  #letter-box {
+    max-height: 25vh; /* Prevents the typed letter from getting too long and hitting the bottom */
+    overflow-y: auto; /* Lets Jamaica scroll the letter if it's long */
+  }
+}
+
