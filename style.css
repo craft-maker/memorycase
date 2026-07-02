@@ -1062,3 +1062,18 @@ img {
     animation: none !important;
   }
 }
+
+/* Fix for mobile collage overlapping the ending text */
+@media (max-width: 640px) {
+  #scene-ending .collage-stage {
+    /* Shifts the entire photo container upward on mobile screens */
+    transform: translateY(-80px); 
+    /* Ensures absolute positioned photos inside don't bleed out into the text */
+    height: 45vh; 
+  }
+  
+  #scene-ending .ending-content {
+    /* Adds a little extra breathing room below the title */
+    margin-top: 20px;
+  }
+}
