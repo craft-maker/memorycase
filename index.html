@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+<title>CLASSIFIED // Case File</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Ambient background layers, present through most of the experience -->
+<div class="grain-overlay"></div>
+<div class="vignette-overlay"></div>
+<canvas id="particle-canvas"></canvas>
+<div class="spotlight" id="spotlight"></div>
+
+<!-- ============================================ -->
+<!-- SCENE 1 — LANDING -->
+<!-- ============================================ -->
+<section class="scene" id="scene-landing">
+  <div class="landing-content">
+    <p class="landing-eyebrow">RESTRICTED ACCESS</p>
+    <button class="btn-start" id="btn-start">
+      <span class="btn-start-label">START</span>
+      <span class="btn-ripple"></span>
+    </button>
+    <p class="landing-hint">clearance required to proceed</p>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SCENE 2 — BOOT SEQUENCE -->
+<!-- ============================================ -->
+<section class="scene" id="scene-boot">
+  <div class="boot-content">
+    <div class="boot-log" id="boot-log"></div>
+    <div class="boot-bar-track">
+      <div class="boot-bar-fill" id="boot-bar-fill"></div>
+    </div>
+    <div class="boot-percent" id="boot-percent">0%</div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SCENE 3 & 4 — CLASSIFIED ARCHIVE / INVESTIGATION -->
+<!-- ============================================ -->
+<section class="scene" id="scene-archive">
+  <div class="archive-header">
+    <p class="archive-tag" id="archive-tag">CONFIDENTIAL</p>
+    <h1 class="archive-title" id="archive-title"></h1>
+  </div>
+
+  <div class="evidence-stage" id="evidence-stage">
+    <!-- populated dynamically by script.js -->
+  </div>
+
+  <div class="archive-progress" id="archive-progress">
+    <span id="archive-progress-current">0</span> / <span id="archive-progress-total">0</span> reviewed
+  </div>
+
+  <button class="btn-next-evidence" id="btn-next-evidence">Next Evidence &rarr;</button>
+</section>
+
+<!-- ============================================ -->
+<!-- SCENE 5 — INTERACTIVE DISCOVERY -->
+<!-- ============================================ -->
+<section class="scene" id="scene-discovery">
+  <div class="discovery-header">
+    <p class="archive-tag">FINAL SWEEP</p>
+    <h1 class="archive-title">Reveal every remaining clue</h1>
+    <p class="discovery-sub" id="discovery-sub">0 / 0 clues uncovered</p>
+  </div>
+  <div class="discovery-field" id="discovery-field">
+    <!-- floating photo nodes populated dynamically -->
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SCENE 6 — SYSTEM FAILURE -->
+<!-- ============================================ -->
+<section class="scene" id="scene-failure">
+  <div class="failure-content">
+    <h1 class="failure-error" id="failure-error">ERROR</h1>
+    <p class="failure-line" id="failure-line-1">Too many cute smiles detected&hellip;</p>
+    <p class="failure-line" id="failure-line-2">Attempting recovery&hellip;</p>
+  </div>
+  <div class="glitch-bars" id="glitch-bars"></div>
+</section>
+
+<!-- ============================================ -->
+<!-- SCENE 7 — FINAL REPORT -->
+<!-- ============================================ -->
+<section class="scene" id="scene-report">
+  <div class="report-sheet" id="report-sheet">
+    <p class="report-kicker">CASE FILE</p>
+    <div class="report-row">
+      <span class="report-label">Target</span>
+      <span class="report-value" id="report-target">&mdash;</span>
+    </div>
+    <div class="report-row">
+      <span class="report-label">Alias</span>
+      <span class="report-value report-alias" id="report-alias">&mdash;</span>
+    </div>
+    <div class="report-row">
+      <span class="report-label">Threat Level</span>
+      <span class="report-value">Extreme</span>
+    </div>
+    <div class="report-row">
+      <span class="report-label">Status</span>
+      <span class="report-value">Impossible to Ignore</span>
+    </div>
+    <div class="report-row">
+      <span class="report-label">Crime</span>
+      <span class="report-value">Stealing My Heart</span>
+    </div>
+
+    <div class="report-stamp-zone">
+      <div class="stamp" id="guilty-stamp">GUILTY</div>
+    </div>
+
+    <div class="report-sentence" id="report-sentence">
+      <p class="sentence-title">Sentence</p>
+      <p class="sentence-line" id="sentence-line-1">Sentence to cuteness Jail.</p>
+      <p class="sentence-line" id="sentence-line-2">Bawal na mang loodhahahha.</p>
+      <p class="sentence-line" id="sentence-line-3">Bzta, I dont know unsa pa hahhaha.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================ -->
+<!-- SCENE 8 — ENDING / COLLAGE -->
+<!-- ============================================ -->
+<section class="scene" id="scene-ending">
+  <div class="collage-stage" id="collage-stage">
+    <!-- photos fly in here -->
+  </div>
+  <canvas id="confetti-canvas"></canvas>
+  <div class="ending-content">
+    <h1 class="ending-title">Case Closed <span class="heart">&hearts;</span></h1>
+    
+    <button class="btn-accept" id="btn-accept">Accept Sentence</button>
+    
+    <div class="ending-final" id="ending-final">
+      <p>Mission Complete.</p>
+      <p class="ending-love">I love you <span class="heart">&hearts;</span></p>
+      
+      <!-- The letter box is hidden inside ending-final -->
+      <div id="letter-box">
+        <span id="letter-text"></span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ============================================ -->
+<!-- EASTER EGG UI -->
+<!-- ============================================ -->
+<div class="secret-toast" id="secret-toast"></div>
+<div class="dev-mode-badge" id="dev-mode-badge">DEVELOPER MODE UNLOCKED</div>
+<script src="script.js"></script>
+</body>
+</html>
