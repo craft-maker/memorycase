@@ -490,8 +490,7 @@ function runEndingScene() {
     burstConfetti();
 
     // YOUR LETTER GOES HERE
-    const loveLetterParagraph = `Gulat ka no hahhhahha, CUte mo talaga, gero man kay ka, gika tulgan ramn ko nimo hahahha, okay rako ana ois, hahahhbzta  ikaw, ana man jud ka haha...... I love you my labs, my lovey babe, my lovey hehheheh, special ka sakin hehehhe, I love you hehhehe. Good night.. stay safe kanunay lovey I always pray for you my loves hehehe, I love You, hopefully no that magpadayun jud ta ba hahh 3 months nalang kuwang, haahahabzta, choya sa hahahhahahehehe, Thank u my lovey, kaayu hhehehhe`;
-
+    const loveLetterParagraph = `Congrats Lovey 😹 hahah. Gero man kaayu ka imo rako gi ka tulgan, okay ra ko ois🙂‍↔️ haha. I Love you so much my loves, babe, lovey hehehe ☺️`;
     // Starts the typing effect 0.6 seconds after the button is clicked
     setTimeout(() => {
       if (letterText) {
